@@ -22,15 +22,15 @@ function App() {
     // Mulai animasi
     setIsTransitioning(true);
 
-    // Tunggu sampai layer hampir menutupi layar
-    await wait(600);
+    // Tunggu sampai overlay selesai gesekan masuk (500ms + sedikit buffer)
+    await wait(500);
 
     // Ganti tema utama + data-theme attribute
     setTheme(nextTheme);
     document.documentElement.setAttribute("data-theme", nextTheme);
 
-    // Tunggu sedikit agar React selesai render
-    await wait(500);
+    // Tunggu overlay bersih keluar dan React render
+    await wait(300);
 
     // Hilangkan layer
     setIsTransitioning(false);

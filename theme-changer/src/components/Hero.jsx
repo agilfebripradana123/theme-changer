@@ -17,7 +17,7 @@ function Hero({ theme }) {
         </h1>
 
         <p
-          className={`mx-auto mt-6 max-w-xl text-lg leading-relaxed ${
+          className={`mx-auto mt-6 max-w-xl text-lg leading-relaxed transition-colors duration-400 ease-in-out ${
             isDark ? "text-slate-400" : "text-slate-500"
           }`}
         >

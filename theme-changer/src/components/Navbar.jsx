@@ -42,7 +42,7 @@ function Navbar({ theme, toggleTheme }) {
   return (
     <nav className="fixed left-0 top-0 z-50 w-full px-4 pt-4">
       <div
-        className={`mx-auto flex h-16 max-w-6xl items-center justify-between rounded-full border px-3 shadow-lg backdrop-blur-xl transition-colors duration-300 ${
+        className={`mx-auto flex h-16 max-w-6xl items-center justify-between rounded-full border px-3 shadow-lg backdrop-blur-xl transition-all duration-400 ease-in-out ${
           isDark
             ? "border-slate-700/60 bg-slate-950/80 shadow-black/20"
             : "border-slate-200/80 bg-white/80 shadow-slate-200/50"
@@ -93,7 +93,7 @@ function Navbar({ theme, toggleTheme }) {
         {/* Theme Button */}
         <button
           onClick={toggleTheme}
-          className={`group flex h-10 w-10 items-center justify-center rounded-full border transition-all duration-300 ${
+          className={`group relative flex h-10 w-10 items-center justify-center rounded-full border transition-all duration-400 ease-in-out ${
             isDark
               ? "border-slate-700 bg-slate-900 text-yellow-400 hover:bg-slate-800"
               : "border-slate-200 bg-white text-slate-700 hover:border-violet-300 hover:bg-violet-50 hover:text-violet-600"
